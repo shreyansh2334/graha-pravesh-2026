@@ -1,1 +1,97 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6f4035">
+  <meta name="description" content="Collect and view photos from the Chopra Family Graha Pravesh, 28–29 November 2026.">
+  <title>Collect Photos | Graha Pravesh 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-mark">✦</span>
+      <span>Graha Pravesh<small>28–29 November 2026</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="rsvp.html">RSVP</a>
+      <a class="active" href="photos.html">Collect Photos</a>
+      <a href="venue.html">Venue &amp; Directions</a>
+    </nav>
+  </header>
+
+  <main class="wrap" style="padding-top:48px;padding-bottom:64px">
+    <section class="section-heading">
+      <p class="eyebrow">OUR FAMILY MEMORIES</p>
+      <h1>Collect <em>Photos</em></h1>
+      <p>Choose a date to explore the celebrations and memories.</p>
+    </section>
+
+    <section class="day-cards" aria-label="Event dates">
+      <article class="day-card">
+        <p class="eyebrow">SATURDAY</p>
+        <h2>28 November 2026</h2>
+        <p>Dinner &amp; Family Get-together</p>
+        <button class="button" type="button" onclick="showMessage('28 November')">View Events</button>
+        <div id="date28-events" hidden>
+          <p><strong>Dinner</strong></p>
+          <p class="album-status">Aap thoda jaldi aa gye</p>
+          <p><strong>Family Get-together</strong></p>
+          <p class="album-status">Aap thoda jaldi aa gye</p>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <p class="eyebrow">SUNDAY</p>
+        <h2>29 November 2026</h2>
+        <p>Navkar Jaap, Breakfast, Home Showing &amp; Lunch</p>
+        <button class="button" type="button" onclick="showMessage('29 November')">View Events</button>
+        <div id="date29-events" hidden>
+          <p><strong>Navkar Jaap</strong></p>
+          <p class="album-status">Aap thoda jaldi aa gye</p>
+          <p><strong>Breakfast</strong></p>
+          <p class="album-status">Aap thoda jaldi aa gye</p>
+          <p><strong>Home Showing</strong></p>
+          <p class="album-status">Aap thoda jaldi aa gye</p>
+          <p><strong>Lunch</strong></p>
+          <p class="album-status">Aap thoda jaldi aa gye</p>
+        </div>
+      </article>
+    </section>
+
+    <p id="album-message" role="status" aria-live="polite" hidden></p>
+    <p style="text-align:center;margin-top:32px">
+      <a href="index.html">← Back to Home</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="footer-brand" href="index.html">✦ <span>Graha Pravesh 2026</span></a>
+      <p>© 2026 Shreyansh Chopra. All Rights Reserved.</p>
+    </div>
+    <div class="footer-credit">
+      <span>Made &amp; Managed by <strong>Shreyansh Chopra</strong></span>
+      <a href="mailto:shreyanshchopra4@gmail.com">✉️ shreyanshchopra4@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script>
+    function showMessage(date) {
+      const box = document.getElementById(
+        date === '28 November' ? 'date28-events' : 'date29-events'
+      );
+      box.hidden = !box.hidden;
+    }
+  </script>
+</body>
+</html>
+
