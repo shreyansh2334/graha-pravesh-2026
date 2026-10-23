@@ -1540,4 +1540,24 @@ img {
     width: 100%;
     box-sizing: border-box;
   }
+
+  
+/* Fix gate photo visibility */
+.hero.hero-gate {
+  background: transparent !important;
 }
+
+.hero.hero-gate::before {
+  z-index: 0;
+}
+
+.hero.hero-gate::after {
+  z-index: 1;
+}
+
+.hero.hero-gate .hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+
