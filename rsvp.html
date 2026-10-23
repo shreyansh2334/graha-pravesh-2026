@@ -1,1 +1,444 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6f4035">
+  <meta name="description" content="RSVP for the Chopra Family Graha Pravesh celebration on 28–29 November 2026 in Hyderabad.">
+  <title>RSVP | Graha Pravesh 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <style>
+    .rsvp-page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 20px 76px;
+    }
+
+    .rsvp-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .rsvp-heading h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      line-height: 1.15;
+      margin: 12px 0;
+    }
+
+    .rsvp-heading h1 em {
+      color: #9b7040;
+      font-weight: 500;
+    }
+
+    .rsvp-heading p:last-child {
+      line-height: 1.8;
+    }
+
+    .rsvp-card {
+      background: #fffdf8;
+      border: 1px solid #e8dcc8;
+      border-radius: 18px;
+      padding: clamp(20px, 5vw, 36px);
+      box-shadow: 0 12px 35px rgba(70, 43, 30, 0.07);
+    }
+
+    .rsvp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .rsvp-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .rsvp-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .rsvp-field label {
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .rsvp-field input,
+    .rsvp-field select {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 49px;
+      padding: 12px 14px;
+      border: 1px solid #d9cbb7;
+      border-radius: 9px;
+      background: #fff;
+      color: #352820;
+      font: inherit;
+    }
+
+    .rsvp-field input:focus,
+    .rsvp-field select:focus {
+      outline: 2px solid #b38b53;
+      outline-offset: 2px;
+    }
+
+    .rsvp-note {
+      color: #75675c;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin: 0 0 22px;
+    }
+
+    .rsvp-submit {
+      width: 100%;
+      justify-content: center;
+      cursor: pointer;
+      border: 0;
+      font: inherit;
+    }
+
+    .rsvp-submit:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
+    .rsvp-status {
+      margin-top: 18px;
+      padding: 13px 15px;
+      border-radius: 9px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .rsvp-status:empty {
+      display: none;
+    }
+
+    .rsvp-status.error {
+      background: #fff0ed;
+      color: #8a2d20;
+      border: 1px solid #f0c4bb;
+    }
+
+    .rsvp-status.success {
+      background: #edf7ed;
+      color: #245b31;
+      border: 1px solid #c8e2ca;
+    }
+
+    .rsvp-status a {
+      color: inherit;
+      font-weight: 700;
+    }
+
+    .rsvp-back {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .rsvp-back a {
+      color: #80563a;
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .rsvp-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .rsvp-page {
+        padding-top: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-mark">✦</span>
+      <span>
+        Graha Pravesh
+        <small>28–29 November 2026</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false">☰</button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a class="active" href="rsvp.html">RSVP</a>
+      <a href="photos.html">Collect Photos</a>
+      <a href="venue.html">Venue &amp; Directions</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="rsvp-page">
+      <div class="rsvp-heading">
+        <p class="eyebrow">CHOPRA FAMILY · GRAHA PRAVESH 2026</p>
+        <h1>We hope you can <em>join us.</em></h1>
+        <p>
+          Please share your arrival details so we can prepare
+          to welcome you to our new home.
+        </p>
+      </div>
+
+      <div class="rsvp-card">
+        <form id="rsvp-form">
+          <div class="rsvp-grid">
+            <div class="rsvp-field full">
+              <label for="guest-name">Your full name</label>
+              <input
+                id="guest-name"
+                name="guest_name"
+                type="text"
+                placeholder="Enter your name"
+                minlength="2"
+                maxlength="100"
+                autocomplete="name"
+                required>
+            </div>
+
+            <div class="rsvp-field">
+              <label for="arrival-date">Arrival date</label>
+              <select id="arrival-date" name="arrival_date" required>
+                <option value="">Choose your date</option>
+                <option value="2026-11-28">28 November 2026</option>
+                <option value="2026-11-29">29 November 2026</option>
+              </select>
+            </div>
+
+            <div class="rsvp-field">
+              <label for="transport-mode">Mode of transport</label>
+              <select id="transport-mode" name="transport_mode" required>
+                <option value="">Choose transport</option>
+                <option value="Car">Car</option>
+                <option value="Train">Train</option>
+                <option value="Flight">Flight</option>
+                <option value="Bus">Bus</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="rsvp-field full">
+              <label for="guest-count">Number of guests, including you</label>
+              <input
+                id="guest-count"
+                name="guest_count"
+                type="number"
+                min="1"
+                max="100"
+                step="1"
+                value="1"
+                required>
+            </div>
+          </div>
+
+          <p class="rsvp-note">
+            Your RSVP details will be saved so the family can plan
+            for your visit. After saving, WhatsApp will open with
+            your details ready to send.
+          </p>
+
+          <button class="button button-primary rsvp-submit"
+            id="rsvp-submit" type="submit">
+            Submit RSVP <span>↗</span>
+          </button>
+
+          <div id="rsvp-status"
+            class="rsvp-status"
+            role="status"
+            aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div class="rsvp-back">
+        <a href="index.html">← Return to the homepage</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="footer-brand" href="index.html">
+        ✦ <span>Graha Pravesh 2026</span>
+      </a>
+      <p>© 2026 Shreyansh Chopra. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-credit">
+      <span>Made &amp; Managed by <strong>Shreyansh Chopra</strong></span>
+      <a href="mailto:shreyanshchopra4@gmail.com">
+        ✉️ shreyanshchopra4@gmail.com
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/site.js"></script>
+
+  <script>
+    /*
+      IMPORTANT:
+      Replace the two placeholder values below with your own
+      Supabase Project URL and public publishable key.
+      Never use a service_role or secret key in this file.
+    */
+    const SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL_HERE";
+    const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE";
+
+    const RSVP_WHATSAPP_NUMBER = "918886723455";
+
+    const form = document.getElementById("rsvp-form");
+    const submitButton = document.getElementById("rsvp-submit");
+    const statusBox = document.getElementById("rsvp-status");
+
+    function showStatus(message, type) {
+      statusBox.className = "rsvp-status " + type;
+      statusBox.textContent = message;
+    }
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      if (
+        SUPABASE_URL.includes("PASTE_YOUR_") ||
+        SUPABASE_PUBLISHABLE_KEY.includes("PASTE_YOUR_")
+      ) {
+        showStatus(
+          "Setup is not finished yet. Add your Supabase Project URL and publishable key to this page before submitting.",
+          "error"
+        );
+        return;
+      }
+
+      if (!window.supabase || !window.supabase.createClient) {
+        showStatus(
+          "The form service could not load. Please check your internet connection and try again.",
+          "error"
+        );
+        return;
+      }
+
+      const guestName = document.getElementById("guest-name").value.trim();
+      const arrivalDate = document.getElementById("arrival-date").value;
+      const transportMode = document.getElementById("transport-mode").value;
+      const guestCount = Number(document.getElementById("guest-count").value);
+
+      if (guestName.length < 2 || guestName.length > 100) {
+        showStatus("Please enter a name between 2 and 100 characters.", "error");
+        return;
+      }
+
+      if (!["2026-11-28", "2026-11-29"].includes(arrivalDate)) {
+        showStatus("Please select 28 or 29 November 2026.", "error");
+        return;
+      }
+
+      if (!["Car", "Train", "Flight", "Bus", "Other"].includes(transportMode)) {
+        showStatus("Please select a transport mode.", "error");
+        return;
+      }
+
+      if (!Number.isInteger(guestCount) || guestCount < 1 || guestCount > 100) {
+        showStatus("Please enter a number of guests between 1 and 100.", "error");
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Saving your RSVP…";
+      statusBox.className = "rsvp-status";
+      statusBox.textContent = "";
+
+      try {
+        const client = window.supabase.createClient(
+          SUPABASE_URL,
+          SUPABASE_PUBLISHABLE_KEY
+        );
+
+        const { data, error } = await client.rpc("submit_rsvp", {
+          p_guest_name: guestName,
+          p_arrival_date: arrivalDate,
+          p_transport_mode: transportMode,
+          p_guest_count: guestCount
+        });
+
+        if (error) {
+          console.error("RSVP save error:", error);
+          throw new Error(
+            "We couldn't save your RSVP. Please try again in a moment."
+          );
+        }
+
+        // Open WhatsApp only after Supabase confirms the save.
+        const readableDate = arrivalDate === "2026-11-28"
+          ? "28 November 2026"
+          : "29 November 2026";
+
+        const message = [
+          "Hello Chopra Family!",
+          "I would like to confirm my visit for Graha Pravesh 2026.",
+          "",
+          "Name: " + guestName,
+          "Arrival date: " + readableDate,
+          "Mode of transport: " + transportMode,
+          "Number of guests: " + guestCount,
+          "",
+          "My RSVP has been submitted through the website."
+        ].join("\n");
+
+        const whatsappUrl =
+          "https://wa.me/" + RSVP_WHATSAPP_NUMBER +
+          "?text=" + encodeURIComponent(message);
+
+        showStatus(
+          "Your RSVP has been saved successfully! Opening WhatsApp so you can send your confirmation to the family.",
+          "success"
+        );
+
+        const whatsappWindow = window.open(whatsappUrl, "_blank");
+
+        if (whatsappWindow) {
+          whatsappWindow.opener = null;
+        } else {
+          const link = document.createElement("a");
+          link.href = whatsappUrl;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = "Click here to open WhatsApp and send your RSVP.";
+          statusBox.appendChild(document.createTextNode(" "));
+          statusBox.appendChild(link);
+        }
+
+        form.reset();
+        document.getElementById("guest-count").value = "1";
+
+      } catch (error) {
+        showStatus(
+          error.message || "Something went wrong. Please try again.",
+          "error"
+        );
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Submit RSVP <span>↗</span>';
+      }
+    });
+  </script>
+</body>
+</html>
+
