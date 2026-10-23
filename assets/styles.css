@@ -1582,5 +1582,10 @@ img {
   background: transparent;
 }
 
+/* Fine-tune the Graha Pravesh gate background */
+.hero.hero-gate::before {
+  filter: blur(2px) !important;
+}
+
 
 
