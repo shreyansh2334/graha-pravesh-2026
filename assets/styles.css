@@ -1428,7 +1428,7 @@ img {
   position: absolute;
   z-index: -2;
   inset: -8px;
-  background-image: url("assets/main%20gate.png");
+  background-image: url("./main%20gate.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(5px);
